@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleForm</title>
+
+    <style>
+        th {
+            font-size: 20px;
+        }
+
+        html {
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .mauxanh {
+            color: blue;
+        }
+
+        td {
+            color: orange;
+        }
+
+        table {
+            border: solid 1px;
+        }
+
+        input[type='text'] {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+<form action="FormDonGian.html" method="get">
+
+
+    <table width="600px" bgcolor="white" cellspacing="5" cellpadding="5">
+
+        <thead>
+        <th style="color: white; background-color: orangered" colspan="4">SỞ THÍCH CỦA BẠN</th>
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <td align="right" class="mauxanh"><label for="yourname"> Họ và tên</label>
+            </td>
+            <td width="30%"><input type="text" name="yourname" id="yourname"></td>
+        </tr>
+        <tr>
+            <td align="right" class="mauxanh"><label for="email"> Email</label></td>
+            <td width="30%"><input type="text" name="email" id="email"></td>
+        </tr>
+        <tr>
+            <td align="right" valign="top" class="mauxanh" rowspan="3">Sở thích</td>
+            <td><input type="checkbox" name="hobby">Thể thao</td>
+            <td><input type="checkbox" name="hobby">Âm nhạc</td>
+            <td><input type="checkbox" name="hobby">Đọc sách</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="hobby">Lướt web</td>
+            <td><input type="checkbox" name="hobby">Chơi game</td>
+            <td><input type="checkbox" name="hobby">Điện ảnh</td>
+            <br>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="hobby">Du lịch</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right"><input type="submit" value="Gửi thông tin"></td>
+            <td><input type="reset" value="Nhập lại"></td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</form>
+
+
+</body>
+</html>

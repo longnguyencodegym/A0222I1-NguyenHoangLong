@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dang ki hoc vien</title>
+    <style>
+        .mauxanhnhat {
+            color: blue;
+        }
+
+        .mauxanh {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+<form action="FormDangKiHocVien.html" method="get">
+
+    <table width="500" cellpadding="5" cellspacing="5" bgcolor="#f0e68c" >
+        <tr>
+            <th bgcolor="#add8e6" align="left" colspan="3" class="mauxanhnhat">ĐĂNG KÍ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td class="mauxanh">Họ và tên</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Ngày sinh</td>
+            <td><input type="text" name="DateOfBirth"></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Giới tính</td>
+            <td width="100"><input type="radio" name="gender">Nam</td>
+            <td><input type="radio" name="gender">Nữ</td>
+
+        </tr>
+        <tr>
+            <td class="mauxanh">Địa chỉ</td>
+            <td colspan="2"><textarea rows="2" cols="40"></textarea></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Lớp</td>
+            <td><select name="class">
+                <option>--chọn lớp--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Điện thoại</td>
+            <td><input type="tel" name="phone"></td>
+        </tr>
+        <tr>
+            <td align="right"><input type="submit" value="Đăng ký"></td>
+            <td align="left"><input type="reset" value="Nhập lại"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

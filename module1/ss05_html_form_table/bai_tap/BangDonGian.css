@@ -1,0 +1,21 @@
+table {
+    font-family: Serif;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+}
+
+.phaixanh {
+    text-align: right;
+    color: dodgerblue;
+}
+
+.traixanh {
+    text-align: left;
+    color: dodgerblue;
+}
+.toxanh{
+    color: blue;font-size: 30px;
+}
