@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+
+            border-collapse: separate;
+            text-align: center;
+            border-spacing: 30px;
+            border-style: hidden;
+        }
+
+        th {
+            border-style: hidden;
+        }
+
+        .hiden {
+            border-style: hidden;
+
+        }
+    </style>
+</head>
+<body>
+<form action="UngDungChuyenDoiTiente.html" method="post">
+    <table border="1" width="500px">
+        <tr class="hiden">
+            <td class="hiden" style="font-size: 25px" align="center" colspan="4" b>ỨNG DỤNG CHUYỂN ĐỒI TIỀN TỆ</td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" name="soluong" id="number"></td>
+            <td>
+                <select name="loaitien" id="loaitien">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td><input type="button" value="Convert" onclick="doitien()"></td>
+        </tr>
+        <tr>
+            <td style="border-style: hidden" ><p id="result"></p></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function doitien() {
+        inputnum = document.getElementById("number").value;
+        let num = parseInt(inputnum);
+        let tien = document.getElementById("loaitien").value;
+        if (tien == "VND")
+            document.getElementById("result").innerText= "số quy đổi là:"+num/23000;
+       else if (tien == "USD")
+            document.getElementById("result").innerText= "số tiền quy đổi là:"+num*23000;
+    }
+</script>
+</body>
+</html>

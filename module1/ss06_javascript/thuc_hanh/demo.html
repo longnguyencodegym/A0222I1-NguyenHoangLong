@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<button onclick="turnOff()">Off</button>
+<img src="https://raw.githubusercontent.com/trungdc-ha/A0222I1_DangChiTrung_Module1/a728a47426d6c312bf7de254ab8bc562e25ae932/ss06_javascript/img/pic_bulboff.gif" id="imgLight">
+<button onclick="turnOn()">On</button>
+
+<script>
+    /*Đây xử lý bật đèn - hàm*/
+    function turnOn() {
+        document.getElementById('imgLight').src = 'https://raw.githubusercontent.com/trungdc-ha/A0222I1_DangChiTrung_Module1/a728a47426d6c312bf7de254ab8bc562e25ae932/ss06_javascript/img/pic_bulbon.gif'
+    }
+    function turnOff() {
+        document.getElementById('imgLight').src = 'https://raw.githubusercontent.com/trungdc-ha/A0222I1_DangChiTrung_Module1/a728a47426d6c312bf7de254ab8bc562e25ae932/ss06_javascript/img/pic_bulboff.gif'
+    }
+</script>
+</body>
+</html>
