@@ -48,7 +48,7 @@
                     <option value="USD">USD</option>
                 </select>
             </td>
-            <td><input type="button" value="Convert" onclick="doitien()"></td>
+            <td><input type="button" value="Convert" onclick="doiTien()"></td>
         </tr>
         <tr>
             <td style="border-style: hidden" ><p id="result"></p></td>
@@ -56,9 +56,9 @@
     </table>
 </form>
 <script>
-    function doitien() {
-        inputnum = document.getElementById("number").value;
-        let num = parseInt(inputnum);
+    function doiTien() {
+        inputNum = document.getElementById("number").value;
+        let num = parseInt(inputNum);
         let tien = document.getElementById("loaitien").value;
         if (tien == "VND")
             document.getElementById("result").innerText= "số quy đổi là:"+num/23000;

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let tien=parseInt(prompt('Số tiền bạn muốn tiết kiệm (vnd): '));
+    let laiSuat=parseFloat(prompt('Lãi suất theo tháng (%): '));
+    let thang=parseInt(prompt('Số tháng bạn muốn tiết kiệm: '));
+    let tong=tien*(1+laiSuat/100)^thang
+    alert("tổng số tiền bạn sẽ có:"+tong);
+</script>
+</body>
+</html>

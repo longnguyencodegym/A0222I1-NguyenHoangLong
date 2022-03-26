@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script>
+    let chuDien=parseInt(prompt('Nhập số chữ điện trong tháng: '));
+    if (chuDien>=100){
+        let x=chuDien*20*10000/100;
+        document.write('Số tiền bạn phải trả là (vnd):'+x);
+    }else if (chuDien>=50){
+        let x=chuDien*15*10000/100;
+        document.write('Số tiền bạn phải trả là (vnd):'+x);
+    }else{
+        let x=chuDien*10*10000/100;
+        document.write('Số tiền bạn phải trả là (vnd):'+x);
+    }
+</script>
+</body>
+</html>

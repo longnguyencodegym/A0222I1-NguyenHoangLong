@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<script>
+    let dt=parseInt(prompt('Nhập tổng số phút bạn đã gọi điện thoại trong tháng: '));
+    if (dt>=100){
+        let x=dt*20*10000/100;
+        document.write('Số tiền bạn phải trả là:'+x);
+    }else if (dt>=50){
+        let x=dt*15*10000/100;
+        document.write('Số tiền bạn phải trả là:'+x);
+    }else{
+        let x=dt*10*10000/100;
+        document.write('Số tiền bạn phải trả là:'+x);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc I</title>
+</head>
+<body>
+<script>
+    alert('Giải phương trình bậc I: Ax+B=0 chúng ta cần:');
+    let a=parseInt(prompt('Nhập hệ số A: '));
+    let b=parseInt(prompt('Nhập hệ số B: '));
+    if (a!=0){
+        let x=-b/a
+        document.write('Phương trình có nghiệm là:'+x);
+    }else{
+        if (b==0){
+            document.write('Phương trình có vô số nghiệm!');
+        }
+        if (b!=0){
+            document.write('Phương trình vô nghiệm!');
+        }
+    }
+</script>
+</body>
+</html>

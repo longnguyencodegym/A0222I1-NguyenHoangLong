@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng theo doanh số bán hàng</title>
+</head>
+<body>
+<script>
+    let doanhSo= parseInt(prompt('Nhập doanh số bán hàng tháng này của bạn (đv:tỷ VND): '));
+    if (doanhSo>=3){
+        let hh=doanhSo*5*10000000/100;
+        document.write('Hoa hồng của bạn là:'+hh);
+    }else if (doanhSo>=2) {
+        let hh = doanhSo * 3*10000000 / 100;
+        document.write('Hoa hồng của bạn là:' + hh);
+    }else {
+        let hh = doanhSo*10000000/ 100;
+        document.write('Hoa hồng của bạn là:' + hh);
+    }
+</script>
+</body>
+</html>

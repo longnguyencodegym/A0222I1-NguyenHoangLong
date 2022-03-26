@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc II</title>
+</head>
+<body>
+<h1> Phương trình bậc II có dạng: Ax<sup>2</sup>+Bx+C=0</h1>
+<form>
+    <input type="button" value="Giải phương trình" onclick="clicked()">
+
+</form>
+<script>
+    function clicked() {
+        let a=parseInt(prompt('Nhập hệ số A: '));
+        if (a==0){
+            alert('Hệ số A phải khác 0');
+        }
+        let b=parseInt(prompt('Nhập hệ số B: '));
+        let c=parseInt(prompt('Nhập hệ số C: '));
+        let delta=b*b-4*a*c;
+        if (delta<0){
+            alert('Phương trình vô nghiệm');
+        }else if (delta=0){
+            let kep=-b/(2*a)
+            alert('Phương trình có nghiệm kép:'+kep);
+        }else{
+            let x1=(-b+Math.sqrt(delta))/2*a;
+            let x2=(-b-Math.sqrt(delta))/2*a;
+            alert('Phương trình có 2 nghiệm:');
+            alert('x1='+x1);
+            alert('x2='+x2);
+        }
+    }
+
+</script>
+</body>
+</html>

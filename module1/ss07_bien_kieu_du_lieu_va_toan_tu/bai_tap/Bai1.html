@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   inputVatLy = prompt("Nhập điểm số môn Vật Lý:");
+    inputHoaHoc = prompt("Nhập điểm số môn Hoá Học:");
+    inputSinhHoc = prompt("Nhập điểm số môn sinh học:");
+    let vatLy= parseInt(inputVatLy);
+    let hoaHoc= parseInt(inputHoaHoc);
+   let sinhHoc= parseInt(inputSinhHoc);
+    let tong = (vatLy+hoaHoc+sinhHoc);
+    let tb = tong/3;
+   document.write("Tổng số điểm 3 môn là:   "+tong +"<br>");
+   document.write("Điểm trung bình 3 môn là:   "+tb +"<br>");
+</script>
+</body>
+</html>

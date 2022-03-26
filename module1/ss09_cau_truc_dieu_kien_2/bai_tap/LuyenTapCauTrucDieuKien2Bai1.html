@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển độ C sang độ F</title>
+</head>
+<body>
+<Form action="LuyenTapCauTrucDieuKien2Bai1.html" method="get">
+    <input type="number" id="nhietdo" name="nhietdo" placeholder="Nhập nhiệt độ C vào đây">
+    <input type="button" value="convert" onclick="convert()"><br>
+    <p id="result"></p>
+</Form>
+<script>
+    function convert() {
+        let inputC=document.getElementById("nhietdo").value;
+        let c=parseInt(inputC);
+        let f=(9*c/5)+32;
+        document.getElementById('result').innerText= "Độ F là:" +f;
+    }
+</script>
+</body>
+</html>

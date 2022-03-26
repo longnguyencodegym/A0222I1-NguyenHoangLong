@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    alert('Thử tính thuế thu nhập cá nhân của bạn nào');
+    let thuNhap = parseFloat(prompt('Thu nhập của bạn(triệu/tháng): '));
+    if (thuNhap <= 5) {
+        let thue = thuNhap * 1000000 * 5 / 100;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    } else if (thuNhap <= 10) {
+        let thue = (thuNhap * 1000000 * 10 / 100) - 0.25 * 1000000;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    } else if (thuNhap <= 18) {
+        let thue = (thuNhap * 1000000 * 15 / 100) - 0.75 * 1000000;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    } else if (thuNhap <= 32) {
+        let thue = (thuNhap * 1000000 * 20 / 100) - 1.65 * 1000000;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    } else if (thuNhap <= 52) {
+        let thue = (thuNhap * 1000000 * 25 / 100) - 3.25 * 1000000;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    } else if (thuNhap <= 80) {
+        let thue = (thuNhap * 1000000 * 30 / 100) - 5.85 * 1000000;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    } else {
+        let thue = (thuNhap * 1000000 * 35 / 100) - 9.85 * 1000000;
+        alert('Số thuế bạn phải nộp là: ' + thue);
+    }
+</script>
+</body>
+</html>

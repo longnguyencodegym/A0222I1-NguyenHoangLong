@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+    let gk = parseInt(prompt('Nhập điểm thi giữa kì: '));
+    let ck = parseInt(prompt('Nhập điểm cuối kì: '));
+    let tb = (gk + ck) / 2;
+    if (tb >= 8) {
+        document.write('Exellent!');
+    } else if (tb >= 7) {
+        document.write('Good!');
+    } else if (tb >= 6.5) {
+        document.write('Normal!');
+    } else if (tb >= 5) {
+        document.write('Bad!');
+    } else {
+        document.write('Very Bad!');
+    }
+</script>
+</body>
+</html>
