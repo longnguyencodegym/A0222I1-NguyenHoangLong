@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let output = "";
+    for (let i = 1; i <= 7; i++) {
+        if (i == 1 || i == 7) {
+            for (let j = 1; j <= 20; j++) {
+                output += "*";
+            }
+        } else {
+            for (let j1 = 1; j1 <= 20; j1++) {
+                if (j1 == 1 || j1 == 20) {
+                    output += "*";
+                } else {
+                    output += "&nbsp&nbsp";
+                }
+            }
+        }
+        output += "<br>";
+    }
+    document.write(output);
+</script>
+</body>
+</html>

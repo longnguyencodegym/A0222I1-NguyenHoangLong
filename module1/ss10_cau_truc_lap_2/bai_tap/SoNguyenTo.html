@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let Numbers = prompt("Nhập số lượng SNT muốn in ra: ");
+    let n = 2;
+    while (true) {
+        let check = true;
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                check = false;
+            }
+        }
+        if (check == true) {
+            document.write(n + "&nbsp");
+            count++
+        }
+        n++;
+        if (count >= Numbers) {
+            break;
+        }
+    }
+</script>
+</body>
+</html>

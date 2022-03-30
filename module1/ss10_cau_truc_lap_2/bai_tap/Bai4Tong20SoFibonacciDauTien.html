@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a1=1, a2=1, a, tong=0;
+    for (let i = 0; i < 20; i++) {
+        a = a1 + a2;
+        a1 = a2;
+        a2 = a;
+        tong=tong+a2;
+    }
+    document.write(tong);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số cần tính giai thừa: '));
+    let i = 1;
+    let giaiThua = 1;
+
+    while (true) {
+        giaiThua = giaiThua * i;
+        i++;
+        if (i > n) {
+            break;
+        }
+    }
+    document.write(giaiThua);
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Làm nháy chứ!</h3>
+<input type="button" value="Chơi" onclick="play()">
+<script>
+    function play() {
+        let canDuoi = parseInt(prompt('Nhập cận dưới: '));
+        let canTren = parseInt(prompt('Nhập cận trên: '));
+        let random = Math.floor(Math.random() * (canTren - canDuoi)) + canDuoi;
+        let dem = 0;
+        do {
+            let so = parseInt(prompt('Nhập số bạn đoán: '));
+            if (so == random) {
+                alert('Bạn đoán đúng rồi!');
+                break
+            } else if (so > random) {
+                alert('Bạn cần nhập số nhỏ hơn!');
+            } else {
+                alert('Bạn cần nhập số lớn hơn!');
+            }
+            dem++;
+            if (dem >= 3) {
+                alert('Chúc bạn may mắn lần sau')
+                break
+            }
+        }
+        while (true)
+    }
+</script>
+</body>
+</html>

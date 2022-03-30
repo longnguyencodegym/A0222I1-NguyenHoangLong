@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 STYLE="text-align: center">BẢNG CỬU CHƯƠNG</h1>
+<script>
+    let bangCuuChuong;
+    bangCuuChuong="<table width='1000' cellpadding='3' cellspacing='0' border='1' align='center'>";
+    for (i=1;i<=9;i++){
+        bangCuuChuong=bangCuuChuong+"<tr>";
+        for (j=2;j<=9;j++)
+            bangCuuChuong=bangCuuChuong+"<td>"+j+"x"+i+"="+i*j+"</td>"
+
+    }
+    document.write(bangCuuChuong);
+</script>
+</body>
+</html>
