@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputMonth = parseInt(prompt('Nhập vào số tháng: '));
+    let laiSuat = parseInt(prompt('Nhập vào lãi suất %/tháng: '));
+    let tien = parseInt(prompt('Nhập vào số tiền ban đầu: '));
+    for (let month = 1; month <= inputMonth; month++) {
+        tien += tien * laiSuat / 100;
+    }
+    document.write(' Số tiền tương lai sau ' + inputMonth + ' tháng là: ' + tien);
+
+</script>
+</body>
+</html>

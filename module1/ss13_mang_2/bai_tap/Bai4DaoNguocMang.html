@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = parseInt(prompt('Nhập 5 phần từ số nguyên của mảng:'));
+    }
+    for (let value of arr) {
+        document.write(value + '&nbsp');
+    }
+    arr.reverse();
+    document.write('<br>'+'Sau khi đảo chiều: '+'<br>');
+    for (let value of arr) {
+        document.write(value + '&nbsp');
+    }
+</script>
+</body>
+</html>

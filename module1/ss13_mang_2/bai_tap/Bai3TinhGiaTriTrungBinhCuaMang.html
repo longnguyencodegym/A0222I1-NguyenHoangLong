@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+
+    for (let i = 0; i < 5; i++) {
+        arr[i] = parseInt(prompt('Nhập 5 phần từ số nguyên của mảng:'));
+    }
+    let max=arr[0];
+    let tong=0
+    let trungBinh=0;
+    for (let i=1;i<arr.length;i++){
+        tong+=arr[i];
+        if (max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    trungBinh=tong/arr.length;
+    document.write('Giá trị lớn nhất là: '+max+'<br>'+' Giá trị trung bình của mảng là: '+trungBinh);
+</script>
+</body>
+</html>
