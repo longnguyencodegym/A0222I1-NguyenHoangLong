@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numberString = prompt("Nhap mot day so: ");
+      let arr = Array.from(numberString);
+      let arr2 = [arr[0]];
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i - 1] % 2 === 0 && arr[i] % 2 === 0) {
+          arr2.push("-", arr[i]);
+        } else {
+          arr2.push(arr[i]);
+        }
+      }
+      let str = arr2.join("");
+      document.write(str);
+    </script>
+  </body>
+</html>

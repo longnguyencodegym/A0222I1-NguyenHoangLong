@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      let arr=["a-b","j-k","t-d","mom-dad"];
+      for (let i=0;i<arr.length;i++) {
+         document.write(arr[i]+" ");
+      }
+      let string1=arr.toString();
+      let arr2=string1.split("-");
+      let string3=arr2.join("_")
+      let arr4=string3.split(",");
+      document.write("<br>"+'Output array:'+"<br>");
+      for (let i=0;i<arr4.length;i++) {
+         document.write(arr4[i]+" ");
+      }
+      </script>
+</body>
+</html>

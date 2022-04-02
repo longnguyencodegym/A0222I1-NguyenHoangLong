@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "Chuc Mung Nam Moi";
+      let output = [];
+      let to = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+      let nho = "abcdefghiklmnopqrstuvwxyz";
+      for (let i = 0; i < str.length; i++) {
+        if (to.indexOf(str[i]) !== -1) {
+          output.push(str[i].toLowerCase());
+        } else if (nho.indexOf(str[i]) !== -1) {
+          output.push(str[i].toUpperCase());
+        } else {
+          output.push(str[i]);
+        }
+      }
+      let str2 = output.join("");
+      document.write(str2);
+    </script>
+  </body>
+</html>
