@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="Bai4TuDien.html" method="get">
+      <input type="text" id="english" />
+      <input type="button" value="Search" onclick="search()" />
+      <p id="result"></p>
+    </form>
+    <script>
+      function search() {
+        let arrE = ["pen", "book", "class", "teacher", "school"];
+        let arrV = ["bút", "sách", "lớp học", "giáo viên", "trường học"];
+        let word = document.getElementById("english").value;
+        for (i = 0; i < arrE.length; i++) {
+          if (word === arrE[i]) {
+             document.getElementById("result").innerHTML = arrV[i];
+             break;
+            } else {
+            document.getElementById("result").innerText = "Not Found";
+          }
+        }
+      }
+
+    </script>
+  </body>
+</html>

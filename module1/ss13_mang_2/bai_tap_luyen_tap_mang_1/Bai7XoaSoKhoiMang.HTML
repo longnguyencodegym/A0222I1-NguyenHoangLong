@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        let arr = [1, 3, 4, 5, -9, -2, -5, 10, 8, 9];
-        for (let i = 0; i < arr.length; i++) {
-            document.write(arr[i] + " ");
+      let arr = [1, 10, 3, 4, 5, -9, -2, -5, 10, 8, 9];
+      for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + " ");
+      }
+      let number = parseInt(prompt("Moi nhap so can tim: "));
+      for (i = 0; i < arr.length; i++) {
+        if (number == arr[i]) {
+          arr.splice(i, 1);
         }
-        let v = parseInt(prompt('Moi nhap so can tim: '));
-        let x = arr.indexOf(v);
-        if (x >= 0) {
-            arr.splice(x, 1);
-            document.write('Mang sau khi xoa: ')
-            for (i = 0; i < arr.length; i++) {
-                document.write(arr[i] + ' ');
-            }
-        } else {
-            alert('Mang khong chua so can tim!');
-        }
+      }
+      document.write("Mang sau khi xoa: ");
+      for (i = 0; i < arr.length; i++) {
+        document.write(arr[i] + " ");
+      }
     </script>
-</body>
-
+  </body>
 </html>
