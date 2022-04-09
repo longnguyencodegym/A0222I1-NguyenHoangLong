@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="output"></p>
+    <script>
+      let arr = new Array(20);
+      for (i = 0; i < arr.length; i++) {
+        arr[i] = new Array(20);
+        for (j = 0; j < arr[i].length; j++) {
+          arr[i][j] = "";
+        }
+      }
+      let checkPlayer1 = true;
+      display();
+      function display() {
+        let tableString = '<table border="1">';
+        for (i = 0; i < 10; i++) {
+          tableString += "<tr>";
+          for (j = 0; j < 10; j++) {
+            tableString +=
+              '<td onclick="play(' +
+              i +
+              "," +
+              j +
+              ')" style="width: 30px;height: 30px;">' +
+              arr[i][j] +
+              "</td>";
+          }
+          tableString += "</tr>";
+        }
+        tableString += "</table>";
+        document.getElementById("output").innerHTML = tableString;
+      }
+      function play(i, j) {
+        if (checkPlayer1 && isNotData(i, j)) {
+          arr[i][j] = "X";
+          checkPlayer1 = false;
+          if(checkWin()){
+            alert('Nguoi choi 1 chien thang!');
+          }
+        } else if (!checkPlayer1 && isNotData(i, j)) {
+          arr[i][j] = "O";
+          checkPlayer1 = true;
+          if(checkWin()){
+            alert('Nguoi choi 2 chien thang!');
+          }
+        }
+        display();
+      }
+      function isNotData(i, j) {
+        if (arr[i][j] == "") {
+          return true;
+        } else {
+          alert("O nay danh roi!");
+          return false;
+        }
+      }
+      function checkWin(){
+        for (i = 0; i < arr.length; i++){
+          for (j = 0; j < arr[i].length; j++){
+            if(arr[i][j]=="X"){
+              if(arr[i][j+1]=="X"&&arr[i][j+2]=="X"){
+                return true;
+              }
+              if(arr[i+1][j]=="X"&&arr[i+2][j]=="X"){
+                return true;
+              }
+              if(arr[i+1][j+1]=="X"&&arr[i+2][j+2]=="X"){
+                return true;
+              }
+              if(arr[i+1][j-1]=="X"&&arr[i+2][j-2]=="X"){
+                return true;
+              }
+            }
+            if(arr[i][j]=="O"){
+              if(arr[i][j+1]=="O"&&arr[i][j+2]=="O"){
+                return true;
+              }
+              if(arr[i+1][j]=="O"&&arr[i+2][j]=="O"){
+                return true;
+              }
+              if(arr[i+1][j+1]=="O"&&arr[i+2][j+2]=="O"){
+                return true;
+              }
+              if(arr[i+1][j-1]=="O"&&arr[i+2][j-2]=="O"){
+                return true;
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

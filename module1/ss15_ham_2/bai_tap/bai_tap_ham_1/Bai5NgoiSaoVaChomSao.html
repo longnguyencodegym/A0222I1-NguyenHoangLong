@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      let star=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+      let Constellation=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+      let input= prompt('Nhap ten ngoi sao:');
+      alert(search(input));
+      function search(x){
+         let key=star.indexOf(x);
+         if(key>=0){
+            return Constellation[key];
+         }else{
+            return 'Not Found!';
+         }
+         }
+        
+      
+
+
+   </script>
+</body>
+</html>

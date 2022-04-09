@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Feet Meter Converter</h1>
+    <input type="number" id="feet1" placeholder="input number of feet!" oninput="feetToMeter()"/>
+    <p id="meter1"></p>
+    <input type="number" id="meter2" placeholder="input number of meter!" oninput="meterToFeet()"/>
+    <p id="feet2"></p>
+    <script>
+      function feetToMeter() {
+        let f1 = document.getElementById("feet1").value;
+        let m1 = 0.305 * f1;
+        document.getElementById("meter1").innerHTML = "meter: "+m1;
+      }
+      function meterToFeet() {
+        let m2 = document.getElementById("meter2").value;
+        let f2 = 3.279 * m2;
+        document.getElementById("feet2").innerHTML ="feet: " +f2;
+      }
+    </script>
+  </body>
+</html>
