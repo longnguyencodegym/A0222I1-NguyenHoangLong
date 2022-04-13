@@ -9,13 +9,13 @@
 <body>
    <script>
       let star=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-      let Constellation=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+      let constellation=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
       let input= prompt('Nhap ten ngoi sao:');
-      alert(search(input));
-      function search(x){
-         let key=star.indexOf(x);
-         if(key>=0){
-            return Constellation[key];
+      alert(searchStar(star));
+      function searchStar(array){
+         let number=star.indexOf(input);
+         if(number>=0){
+            return constellation[number];
          }else{
             return 'Not Found!';
          }

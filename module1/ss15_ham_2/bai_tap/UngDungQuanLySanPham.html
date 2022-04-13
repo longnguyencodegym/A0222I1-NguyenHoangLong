@@ -11,22 +11,66 @@
 <body>
    
    <h3>Add New Product</h3>
-   <form action="">
-   <input type="text" placeholder="New Product">
-   <input type="submit" value="Add">
+   
+   <input type="text" placeholder="New Product" id="input">
+   <input type="submit" value="Add" onclick="add()">
    <h3>Display All Product</h3>
-   <h4>Product Name</h4>
-   <table border="1" style="border-collapse: collapse;">
-      <th>
-         <td>Serial</td>
-         <td>Product Name</td>
-         <td>Action</td>
-      </th>
-   </table>
-</form>
+   <span>Product Name</span>
+   <p id="output"></p>
+
    <script>
       let inputProduct=["Samsung","Xiaomi","Sony","Nokia","Iphone","Oneplus","Vertu"];
-
+      display(inputProduct);
+      function display(Product){
+         let tableString='<table border="1" style="border-collapse: collapse;">'+
+            '<tr>'+
+               '<th>Serial</th>'+
+               '<th>Product Name</th>'+
+               '<th>Edit</th>'+
+               '<th>Delete</th>'+
+               '<tr>';
+               for (i=0;i<Product.length;i++) {
+               tableString+='<tr>'+
+                  '<td>'+(i+1)+'</td>'+
+                  '<td>'+Product[i]+'</td>'+
+                  '<td><input type="button" value="edit" onclick="editProduct('+i+')"></td>'+
+                  '<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>'+
+                  '<tr>';
+               }
+            tableString+='</table>';
+            document.getElementById("output").innerHTML=tableString;
+      }
+      function add(){
+         let newProduct=document.getElementById("input").value;
+         if(newProduct==""){
+         alert("Ban can nhap san pham vao o nay!");
+         }else{
+            inputProduct.push(newProduct);
+         display(inputProduct);
+         document.getElementById("input").value="";
+         }
+      }
+function deleteProduct(index) {
+   let conf=confirm("Ban chac la muon xoa: "+inputProduct[index]);
+   if(conf){   
+      inputProduct.splice(index,1);
+   display(inputProduct);
+   }
+}
+function editProduct(index){
+   while(true){
+let product2=prompt('Nhap ten san pham muon thay the: ');
+if(product2==""){
+alert("Ban can nhap ten san pham!");
+}else if(!product2){
+   break;
+}else{
+   inputProduct[index]=product2;
+display(inputProduct);
+break;
+}
+}
+}
    </script>
 </body>
 </html>

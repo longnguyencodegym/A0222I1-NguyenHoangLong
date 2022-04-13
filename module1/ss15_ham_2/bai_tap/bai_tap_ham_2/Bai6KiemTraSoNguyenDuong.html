@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="number-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
 <body>
    <script>
-      let num=prompt('input number: ');
-      alert(check(num));
-      function check(x){
-if(x==parseInt(x)){
-   if(x>0){
-      return x +" la so nguyen duong";
-   }else if(x<0){
-      return x +" la so nguyen am";
+      let inputNumber=prompt('input number: ');
+      alert(check(inputNumber));
+      function check(number){
+if(number==parseInt(number)){
+   if(number>0){
+      return number +" la so nguyen duong";
+   }else if(number<0){
+      return number +" la so nguyen am";
    }else{
-      return x +" la so 0";
+      return "Input la so 0";
    }
 }else{
    return false;

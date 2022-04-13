@@ -8,10 +8,10 @@
   </head>
   <body>
     <script>
-      let arr = [1, 2, 3, 4, 1, 5, 4, 8, 1, 2];
+      let arrNum = [1, 2, 3, 4, 1, 5, 4, 8, 1, 2];
       let num = parseInt(prompt("Input number: "));
-      alert(searchNumber());
-      function searchNumber() {
+      alert(searchNumber(arrNum));
+      function searchNumber(arr) {
         let count = 0;
         let flag = false;
         for (i = 0; i < arr.length; i++) {

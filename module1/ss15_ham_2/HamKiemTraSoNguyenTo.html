@@ -9,12 +9,13 @@
   <body>
     <script>
       let number = parseInt(prompt("Input Number:"));
-      if (number <= 1) {
+    
+     
+        isPrime(number);
+      function isPrime(prime) {
+        if (number <= 1) {
         alert("False");
       } else {
-        isPrime();
-      }
-      function isPrime(x) {
          let flag=true;
          for(i=2;i<number;i++){
             if(number%i==0){
@@ -23,6 +24,7 @@
          }
          alert(flag);
       }
+    }
       
     </script>
   </body>

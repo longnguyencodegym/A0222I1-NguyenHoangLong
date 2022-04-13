@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let string = prompt("Input word: ");
+      let arr = string.split("");
+      alert(isPalindrome(arr));
+      function isPalindrome(word) {
+        let last = word.length - 1;
+        if (word[0] == word[last]) {
+          word.pop();
+          word.shift();
+          if (word.length == 0 || word.length == 1) {
+            return true;
+          }else{
+             return isPalindrome(word);
+          }
+        }else{
+           return false;
+        }
+      }
+    </script>
+  </body>
+</html>

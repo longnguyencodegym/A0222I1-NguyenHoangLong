@@ -11,12 +11,12 @@
       let a = parseInt(prompt("a: "));
       let b = parseInt(prompt("b: "));
       document.write("truoc khi hoan doi: " + a + ", " + b + "<br>");
-      swap();
-      function swap() {
-        let c = a;
-        a = b;
-        b = c;
-        document.write("Sau khi hoan doi: " + a + ", " + b);
+      swap(a,b);
+      function swap(obj1,obj2) {
+        let temp = obj1;
+        obj1 = obj2;
+        obj2 = temp;
+        document.write("Sau khi hoan doi: " + obj1 + ", " + obj2);
       }
     </script>
   </body>
