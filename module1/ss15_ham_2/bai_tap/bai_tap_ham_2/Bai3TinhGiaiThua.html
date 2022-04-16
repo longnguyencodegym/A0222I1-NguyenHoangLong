@@ -10,12 +10,12 @@
    <script>
       let number=parseInt(prompt('Input Number:'));
       alert(calFactoryal(number));
-      function calFactoryal(x){
-         let factorial=1;
-         for (let i=1;i<=x;i++) {
-         factorial*=i;
+      function calFactoryal(factorial){
+         let first=1;
+         for (let i=1;i<=factorial;i++) {
+         first*=i;
          }
-         return factorial;
+         return first;
       }
    </script>
 </body>

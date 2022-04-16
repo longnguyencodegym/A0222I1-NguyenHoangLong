@@ -8,14 +8,12 @@
   </head>
   <body>
     <script>
-      let string = prompt("Input word: "); //Đệ quy mảng.
-      let arr = string.split("");
-      alert(isPalindrome(arr));
+      let string = prompt("nhap chuoi:"); // Đệ quy chuỗi.
+      alert(isPalindrome(string));
       function isPalindrome(word) {
         let last = word.length - 1;
-        if (word[0] == word[last]) {
-          word.pop();
-          word.shift();
+        if (word.charAt(0) == word.charAt(last)) {
+          word = word.slice(1, last);
           if (word.length == 0 || word.length == 1) {
             return true;
           } else {

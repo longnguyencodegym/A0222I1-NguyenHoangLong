@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>ADD NEW PRODUCT</h2>
+   <input type="text" id="product" placeholder="new product">
+   <input type="button" id="add" value="ADD" onclick="add()">
+<h2>DISPLAY ALL PRODUCT</h2>
+<span style="font-weight: bold;">Product Name</span>    <span id="number" style="margin: 40px;font-weight: bold;"></span>   
+<p id="display"></p>
+
+   <script>
+      let productGroup=["samsung","nokia"];
+      display(productGroup);
+function display(product){
+   let tableString='<table border="1" style="border-collapse: collapse;">';
+      for (let i=0;i<product.length;i++) {
+      tableString+="<tr>"+
+         '<td>'+product[i]+'</td>'+
+         '<td><input type="button" value="Edit" onclick="editProduct('+i+')"></td>'+
+         '<td><input type="button" value="Delete" onclick="deleteProduct('+i+')"></td>'+
+         "</tr>";
+      }
+      tableString+="</table>";
+      document.getElementById("display").innerHTML=tableString;
+      document.getElementById("number").innerText=product.length+" Product";
+}
+function add(){
+   let newProduct=document.getElementById("product").value;
+   if(newProduct==""){
+   alert("Ban can nhap san pham !");
+   }else{
+      productGroup.push(newProduct);
+   }
+   display(productGroup);
+   document.getElementById("product").value="";
+}
+function deleteProduct(index){
+   let conf=confirm("Ban chac chan muon xoa: "+productGroup[index])
+   if(conf){
+      productGroup.splice(index,1);
+      display(productGroup);
+   }
+}
+function editProduct(index){
+   while(true){
+   let edProduct=prompt("Moi nhap san pham moi: ");
+   if(edProduct==""){
+   alert("Ban chua nhap san pham moi");
+   }else if(!edProduct){
+      break;
+   }else{
+      productGroup[index]=edProduct;
+      break;
+   }
+}
+display(productGroup);
+}
+   </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+    <script>
+      class Rectangle {
+        constructor(length, width) {
+          this.length = length;
+          this.width = width;
+          this.canvas = document.getElementById("myCanvas");
+          this.ctx = this.canvas.getContext("2d");
+        }
+        calSquare(){
+           return this.length*this.width;
+        }
+        calPerimeter(){
+           return 2*(this.length+this.width);
+        }
+        createRectangle(){
+         this.ctx.fillStyle='#fa4b2a';
+         this.ctx.fillRect(20, 20, this.width, this.length);
+        }
+        setRectangle(newLength,newWidth){
+           this.length=newLength;
+           this.width=newWidth;
+        }
+
+        reDarwing() {
+         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+         this.createRectangle();
+        }
+      }
+      let rectangle=new Rectangle(100,200);
+      let square1=rectangle.calSquare();
+      let perimiter1=rectangle.calPerimeter();
+      // alert(square1+ "  "+perimiter1);
+      rectangle.createRectangle();
+      rectangle.setRectangle(200,500);
+      let square2=rectangle.calSquare();
+      let perimiter2=rectangle.calPerimeter();
+      // alert(square2+ "  "+perimiter2);
+      setTimeout(() => {
+         rectangle.reDarwing();
+      }, 3000);
+    </script>
+  </body>
+</html>
