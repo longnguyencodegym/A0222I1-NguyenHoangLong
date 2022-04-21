@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name, weight, speed) {
+          this.name = name;
+          this.weight = weight;
+          this.speed = speed;
+        }
+        setName(name) {
+          this.name = name;
+        }
+        getName() {
+          return this.name;
+        }
+        setWeight(weight) {
+          this.weight = weight;
+        }
+        getWeight() {
+          return this.weight;
+        }
+        setSpeed(speed) {
+          this.speed = speed;
+        }
+        getSpeed() {
+          return this.speed;
+        }
+      }
+      class Cat extends Animal {
+        constructor(name, weight, speed) {
+          super(name, weight, speed);
+        }
+        say(messege) {
+          console.log("meo meo: " + messege);
+        }
+        catchRat(rat) {
+          if (this.speed > rat.speed) {
+            this.say("Bat dc roi nhe");
+            this.eatRat(rat);
+          } else {
+            rat.say("Con lau moi bat dc nhe");
+          }
+        }
+        eatRat(rat) {
+          if (rat.status == true) {
+            this.weight += rat.weight;
+          }else{
+             this.say("con nay chet mat roi")
+          }
+        }
+      }
+      class Rat extends Animal {
+        constructor(name, weight, speed, status) {
+          super(name, weight, speed);
+          this.status = status;
+        }
+        say(messege) {
+          console.log("chit chit: " + messege);
+        }
+      }
+      let rat1 = new Rat("Jerry1", 10, 10, true);
+      let rat2 = new Rat("Jerry2", 10, 15, true);
+      let rat3 = new Rat("Jerry3", 10, 9, false);
+
+
+      let cat = new Cat("Tom", 20, 11);
+
+      cat.catchRat(rat1);
+      cat.catchRat(rat2);
+      cat.catchRat(rat3);
+
+      console.log(cat.getWeight());
+    </script>
+  </body>
+</html>
