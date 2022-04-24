@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      let arr=[1,2,3,4];
+      let arrTemp=0;
+      let arrSum=[];
+      for (let i=0;i<arr.length;i++) {
+         if(i==0){
+            arrSum.push(arr[i]);
+         }else{
+
+            arrTemp=arr[i-1]+arr[i];
+            arrSum.push(arrTemp);
+            arr[i-1]=arr[i];
+            arr[i]=arrTemp;
+         }
+      }
+      console.log(arrSum);
+      
+   </script>
+</body>
+</html>

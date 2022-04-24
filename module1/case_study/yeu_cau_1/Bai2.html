@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let h = 5;
+      let output = "";
+      for (i = 1; i <= h; i++) {
+        for (j = 1; j <= i; j++) {
+           if(j==1||j==i||i==h){
+              output += "*";
+           }else{
+            output += "&nbsp&nbsp";
+           }
+        }
+        output += "<br>";
+      }
+      document.write(output);
+    </script>
+  </body>
+</html>

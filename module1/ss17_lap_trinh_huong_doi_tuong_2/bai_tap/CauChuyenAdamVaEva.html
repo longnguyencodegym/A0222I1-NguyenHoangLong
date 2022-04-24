@@ -62,42 +62,39 @@
           if (this.checkApple(apple)) {
             apple.weight--;
             this.weight++;
+          }
         }
-      }
         checkApple(apple) {
           if (apple.isEmpty(apple)) {
             console.log("het tao roi!");
-            return false
+            return false;
           } else {
             console.log("con tao");
             return true;
           }
         }
-      
       }
-      let adam = new Human("Adam","nam", 70);
-      let eva=new Human("Eva","nu",50);
-      let apple=new Apple();
-   adam.say("Eva, an tao khong e?");
-   eva.say("khong, e so map lam");
-   adam.say("vay a se an het!");
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   adam.eatApple(apple);
-   console.log(apple.getWeight());
-   
-   console.log(adam.getWeight());
-   
-      
+      let adam = new Human("Adam", "nam", 70);
+      let eva = new Human("Eva", "nu", 50);
+      let apple = new Apple();
+      adam.say("Eva, an tao khong e?");
+      eva.say("khong, e so map lam");
+      adam.say("vay a se an het!");
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      adam.eatApple(apple);
+      console.log(apple.getWeight());
+
+      console.log(adam.getWeight());
     </script>
   </body>
 </html>

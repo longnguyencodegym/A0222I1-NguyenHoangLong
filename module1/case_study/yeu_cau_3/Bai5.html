@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Menu</h1>
+    <ol type="1">
+      <li>cafe</li>
+      <li>cam vat</li>
+      <li>nuoc ep ca rot</li>
+      <li>nuoc ep ca chua</li>
+      <li>nuoc loc</li>
+      <li>nuoc dua</li>
+      <li>thoat goi mon</li>
+      <br />
+      <input type="button" value="Order" onclick="order()" />
+      <br />
+      <p id="total"></p>
+    </ol>
+    <script>
+      function order() {
+        let number = 0;
+        let result = 0;
+        let total = 0;
+        let drinking;
+        let flag = false;
+        do {
+         total += result;
+          drinking = prompt("Moi chon stt do uong: ");
+          switch (drinking) {
+            case "1":
+              number = parseInt(prompt("cafe co gia 1$. Nhap so luong: "));
+              result = number;
+              break;
+            case "2":
+              number = parseInt(prompt("cam vat co gia 2$. Nhap so luong: "));
+              result = number * 2;
+              break;
+            case "3":
+              number = parseInt(
+                prompt("nuoc ep ca rot co gia 3$. Nhap so luong: ")
+              );
+              result = number * 3;
+              break;
+            case "4":
+              number = parseInt(
+                prompt("nuoc ep ca chua co gia 4$. Nhap so luong: ")
+              );
+              result = number * 4;
+              break;
+            case "5":
+              number = parseInt(prompt("nuoc loc co gia 5$. Nhap so luong: "));
+              result = number * 5;
+              break;
+            case "6":
+              number = parseInt(prompt("nuoc dua co gia 6$. Nhap so luong: "));
+              result = number * 6;
+              break;
+            case "7":
+              flag = true;
+              break;
+            default:
+              alert("Vui long chon so trong menu!");
+          }
+          
+        } while (!flag);
+        document.getElementById("total").innerHTML = "Total: "+total + " USD";
+      }
+    </script>
+  </body>
+</html>

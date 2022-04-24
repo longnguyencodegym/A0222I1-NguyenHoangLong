@@ -8,18 +8,16 @@
 </head>
 <body>
    <script>
-      let string="  My name is      Hoang Long  ";
-      let arr=string.split(" ");
-      arr2=[];
-      for(i=0;i<arr.length;i++){
-         
-         if(arr[i]==""){
-            continue;
-         }else{
-            arr2.push(arr[i]);
+      let arrA=[7,2,5,3,5,3];
+      let arrB=[7,2,5,4,6,3,5,3];
+      let missingAB=[];
+      for (i=0;i<arrB.length;i++) {
+         if(arrA.indexOf(arrB[i])==-1){
+         missingAB.push(arrB[i]);
          }
       }
-      document.write("So tu co trong chuoi: "+arr2.length);
+      console.log(missingAB);
+      
    </script>
 </body>
 </html>
