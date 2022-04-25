@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function createArr() {
+        let row = parseInt(prompt("Nhap so hang cua mang: "));
+        let col = parseInt(prompt("Nhap so cot cua mang: "));
+        let numberArr = [];
+        for (let i = 0; i < row; i++) {
+          numberArr[i] = [];
+          for (let j = 0; j < col; j++) {
+            numberArr[i][j] = Math.floor(Math.random() * 10) + 1;
+          }
+        }
+        return numberArr;
+      }
+      let newArr = createArr();
+      console.log(newArr);
+
+      function sumEven(arr) {
+        sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 == 0) {
+              sum += arr[i][j];
+            }
+          }
+        }
+        return sum;
+      }
+      
+      console.log(sumEven(newArr));
+
+    </script>
+  </body>
+</html>

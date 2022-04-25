@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let string1 = "aabccdef";
+      let string2 = "adecdafa";
+      let count = 0;
+      let arr = Array.from(string2);
+      for (let i = 0; i < string1.length; i++) {
+        let character = string1.charAt(i);
+        for (let j = 0; j < arr.length; j++) {
+          if (character == arr[j]) {
+            let index = arr.indexOf(character);
+            arr.splice(index, 1);
+            count++;
+            break;
+          }
+        }
+      }
+      console.log(count);
+    </script>
+  </body>
+</html>
