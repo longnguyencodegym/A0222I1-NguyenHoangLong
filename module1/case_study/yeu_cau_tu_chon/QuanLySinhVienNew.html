@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+</head>
+
+<body>
+
+   </table>
+   <label for="id">ID </label><input type="number" id="id">
+
+   <label for="name">NAME </label><input type="text" id="name">
+
+   <label for="age">AGE </label><input type="text" id="age">
+
+   <label for="gender">GENDER </label><select id="gender">
+      <option>Male</option>
+      <option>FeMale</option>
+      <option>Orther</option>
+   </select>
+
+   <label for="phone">PHONE</label> </label><input type="number" id="phone">
+   <input type="button" style="display: inline-block;" id="add" value="ADD" onclick="add()">
+   <input type="button" id="save" value="SAVE" onclick="save(this.value)" style="display: none;">
+   <p id="display"></p>
+   <script>
+      let studentArray = [];
+      class Student {
+         constructor(id, name, age, gender, phone) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.phone = phone;
+         }
+         setId(id) {
+            this.id = id;
+         }
+         getId() {
+            return this.id;
+         }
+         setName(name) {
+            this.name = name;
+         }
+         getName() {
+            return this.name;
+         }
+         setAge(age) {
+            this.age = age;
+         }
+         getAge() {
+            return this.age;
+         }
+         setGender(gender) {
+            this.gender = gender;
+         }
+         getGender() {
+            return this.gender;
+         }
+         setPhone(phone) {
+            this.phone = phone;
+         }
+         getPhone() {
+            return this.phone;
+         }
+      }
+
+      function display() {
+
+         let tableString = '<table border="1" style="border-collapse: collapse;">' + '<th>ID</th>' + '<th>NAME</th>' + '<th>AGE</th>' + '<th>GENDER</th>' + '<th>PHONE</th>';
+         for (let i = 0; i < studentArray.length; i++) {
+            tableString += '<tr>' +
+               '<td>' + studentArray[i].id + '</td>' +
+               '<td>' + studentArray[i].name + '</td>' +
+               '<td>' + studentArray[i].age + '</td>' +
+               '<td>' + studentArray[i].gender + '</td>' +
+               '<td>' + studentArray[i].phone + '</td>' +
+               '<td>' + '<input type="button" value="Edit" onclick="edit(' + i + ')">' + '</td>' +
+               '<td>' + '<input type="button" value="Delete" onclick="deleteStudent(' + i + ')">' + '</td>' +
+               '</tr>';
+         }
+         tableString += '</table>'
+         document.getElementById("display").innerHTML = tableString;
+      }
+
+      function add() {
+         let newId = document.getElementById("id").value;
+         let newName = document.getElementById("name").value;
+         let newAge = document.getElementById("age").value;
+         let newGender = document.getElementById("gender").value;
+         let newPhone = document.getElementById("phone").value;
+
+         if (newId == "" || newName == "" || newAge == "" || newPhone == "") {
+            alert("Ban can nhap day du thong tin!");
+         } else {
+            let newStudent = new Student();
+            studentArray.push(newStudent);
+            newStudent.setId(newId);
+            newStudent.setName(newName);
+            newStudent.setAge(newAge);
+            newStudent.setGender(newGender);
+            newStudent.setPhone(newPhone);
+            display(studentArray);
+            clear();
+         }
+      }
+      function clear() {
+         document.getElementById("id").value = "";
+         document.getElementById("name").value = "";
+         document.getElementById("age").value = "";
+         document.getElementById("phone").value = "";
+      }
+
+      function deleteStudent(student) {
+         studentArray.splice(student, 1);
+         display(studentArray);
+      }
+      function edit(student) {
+         document.getElementById("add").style.display = "none";
+         document.getElementById("id").value = studentArray[student].id;
+         document.getElementById("name").value = studentArray[student].name;
+         document.getElementById("age").value = studentArray[student].age;
+         document.getElementById("gender").value = studentArray[student].gender;
+         document.getElementById("phone").value = studentArray[student].phone;
+         deleteStudent(student);
+         document.getElementById("save").style.display = "inline-block";
+      }
+      function save() {
+         add()
+         document.getElementById("save").style.display = "none";
+         document.getElementById("add").style.display = "inline-block";
+
+      }
+
+   </script>
+</body>
+
+</html>

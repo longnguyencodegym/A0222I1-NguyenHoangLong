@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Xổ số Codegym</h1>
+    <p id="ticket"></p>
+    <p id="result"></p>
+    <h1 id="show"></h1>
+
+    <input type="button" value="Buy Ticket" onclick="buy()" />
+    <input type="button" value="Test Ticket" onclick="test()" />
+    <script>
+      class Ticket {
+        constructor(number1, number2, number3, number4, number5, number6) {
+          this.number1 = number1;
+          this.number2 = number2;
+          this.number3 = number3;
+          this.number4 = number4;
+          this.number5 = number5;
+          this.number6 = number6;
+        }
+        setNumber1(number) {
+          this.number1 = number;
+        }
+        getNumber1() {
+          return this.number1;
+        }
+        setNumber2(number) {
+          this.number2 = number;
+        }
+        getNumber2() {
+          return this.number2;
+        }
+        setNumber3(number) {
+          this.number3 = number;
+        }
+        getNumber3() {
+          return number3;
+        }
+        setNumber4(number) {
+          this.number4 = number;
+        }
+        getNumber4() {
+          return number4;
+        }
+        setNumber5(number) {
+          this.number5 = number;
+        }
+        getNumber5() {
+          return number5;
+        }
+        setNumber6(number) {
+          this.number6 = number;
+        }
+        getNumber6() {
+          return number6;
+        }
+        randomNumber() {
+          this.number1 = Math.floor(Math.random() * 99) + 1;
+          this.number2 = Math.floor(Math.random() * 99) + 1;
+          this.number3 = Math.floor(Math.random() * 99) + 1;
+          this.number4 = Math.floor(Math.random() * 99) + 1;
+          this.number5 = Math.floor(Math.random() * 99) + 1;
+          this.number6 = Math.floor(Math.random() * 99) + 1;
+        }
+      }
+
+      let ticketArray=[];
+      function display(ticket) {
+        let ticketString =
+          '<table >';
+
+        for (let i = 0; i < ticket.length; i++) {
+          ticketString +=
+            "<tr>" +
+            '<td><input value='+ticket[i].number1+' type="number" onclick="editTicket(this)">' +
+            "</td>" +
+            '<td><input value='+ticket[i].number2+' type="number" onclick="editTicket(this)">' +
+            "</td>" +
+            '<td><input value='+ticket[i].number3+' type="number" onclick="editTicket(this)">' +
+            "</td>" +
+            '<td><input value='+ticket[i].number4+' type="number" onclick="editTicket(this)">' +
+            "</td>" +
+            '<td><input value='+ticket[i].number5+' type="number" onclick="editTicket(this)">' +
+            "</td>" +
+            '<td><input value='+ticket[i].number6+' type="number" onclick="editTicket(this)">' +
+            "</td>" +
+            "</tr>";
+        }
+        ticketString += "</table>";
+        document.getElementById("ticket").innerHTML = ticketString;
+      }
+      function buy() {
+        if(ticketArray.length<4) {
+
+          let option = parseInt(
+            prompt(`Ban co 2 lua chon:
+          1.Tu chon so.
+          2.He thong random so.`)
+          );
+          if (option == 1) {
+            let newTicket=new Ticket();
+            newTicket.setNumber1(prompt("Nhap so ban chon: "));
+            newTicket.setNumber2(prompt("Nhap so ban chon: "));
+            newTicket.setNumber3(prompt("Nhap so ban chon: "));
+            newTicket.setNumber4(prompt("Nhap so ban chon: "));
+            newTicket.setNumber5(prompt("Nhap so ban chon: "));
+            newTicket.setNumber6(prompt("Nhap so ban chon: "));
+            ticketArray.push(newTicket);
+          } else if (option == 2) {
+            let newTicket=new Ticket();
+            newTicket.randomNumber();
+            ticketArray.push(newTicket);
+          }
+          display(ticketArray);
+        }else{
+          alert("Ban da het luot mua ve!")
+        }
+      }
+      function editTicket(element){
+        let conf=confirm("Ban co chac la muon doi ve?");
+        if (conf){
+          let newNumber=parseInt(prompt("Moi nhap so moi: "));
+          element.value=newNumber;
+        }
+      }
+      function test(){
+        let resultTicket=new Ticket();
+        resultTicket.randomNumber();
+        let resultString='Result:'+'<input type="number" value='+resultTicket.number1+'><input type="number" value='+resultTicket.number2+'><input type="number" value='+resultTicket.number3+'><input type="number" value='+resultTicket.number4+'><input type="number" value='+resultTicket.number5+'><input type="number" value='+resultTicket.number6+'>';
+        document.getElementById("result").innerHTML=resultString;
+        let countKhuyenKhich=0;
+        let countGiaiNhi=0;
+        let countGiaiNhat=0;
+
+        for (let i=0;i<ticketArray.length;i++) {
+        if(resultTicket.number6==ticketArray[i].number6&&resultTicket.number5==ticketArray[i].number5&&resultTicket.number4==ticketArray[i].number4){
+          countKhuyenKhich++;
+          if(resultTicket.number3==ticketArray[i].number3&&resultTicket.number2==ticketArray[i].number2){
+            countGiaiNhi++;
+            if(resultTicket.number1==ticketArray[i].number1){
+              countGiaiNhat++;
+            }
+        }
+        }
+        }
+    document.getElementById("show").innerHTML="Giai nhat: "+countGiaiNhat+"<br>"+"Giai nhi: "+countGiaiNhi+"<br>"+"Giai khuyen khich: "+countKhuyenKhich;
+      }
+    </script>
+  </body>
+</html>
