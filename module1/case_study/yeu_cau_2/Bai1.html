@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
+
 <body>
    <script>
-      let totalSalary=parseInt(prompt("Nhap luong (trieu/thang): "));
-      let tax=0;
-      if(totalSalary>=15){
-         tax=totalSalary*20/100;
-      }else if(totalSalary<15&&totalSalary>=7){
-         tax=totalSalary*10/100;
-      }else{
-         tax=totalSalary*5/100;
+      let totalSalary = parseInt(prompt("Nhap luong (trieu/thang): "));
+      let tax = 0;
+      if (totalSalary >= 15) {
+         tax = totalSalary * 20 / 100;
+      } else if (totalSalary < 15 && totalSalary >= 7) {
+         tax = totalSalary * 10 / 100;
+      } else {
+         tax = totalSalary * 5 / 100;
       }
-      let salary=totalSalary-tax;
-      document.write("Thue: "+tax+"<br>"+"Luong thuc nhan: "+salary);
+      let salary = totalSalary - tax;
+      document.write("Thue: " + tax + "<br>" + "Luong thuc nhan: " + salary);
 
 
    </script>
 </body>
+
 </html>

@@ -190,71 +190,149 @@ public class ReadNumber {
             }
             tens = tempNumber / 10;
             ones = tempNumber % 10;
-            switch (tens) {
-                case 2:
-                    System.out.print("Twen");
-                    break;
-                case 3:
-                    System.out.print("Thir");
-                    break;
-                case 4:
-                    System.out.print("Four");
-                    break;
-                case 5:
-                    System.out.print("Fif");
-                    break;
-                case 6:
-                    System.out.print("Six");
-                    break;
-                case 7:
-                    System.out.print("Seven");
-                    break;
-                case 8:
-                    System.out.print("Eigh");
-                    break;
-                case 9:
-                    System.out.print("Nine");
-                    break;
+            if (tempNumber >= 10) {
+                if (tens == 1) {
+                    switch (ones) {
+                        case 0:
+                            System.out.println("and ten");
+                            break;
+                        case 1:
+                            System.out.println("and elevent");
+                            break;
+                        case 2:
+                            System.out.println("and twelve");
+                            break;
+                        case 3:
+                            System.out.println("and thirteen");
+                            break;
+                        case 4:
+                            System.out.println("and fourteen");
+                            break;
+                        case 5:
+                            System.out.println("and fifteen");
+                            break;
+                        case 6:
+                            System.out.println("and sixteen");
+                            break;
+                        case 7:
+                            System.out.println("and seventeen");
+                            break;
+                        case 8:
+                            System.out.println("and eighteen");
+                            break;
+                        case 9:
+                            System.out.println("and nineteen");
+                            break;
 
+                    }
+                } else if (tens > 1) {
+                    switch (tens) {
+
+                        case 2:
+                            System.out.print("Twen");
+                            break;
+                        case 3:
+                            System.out.print("Thir");
+                            break;
+                        case 4:
+                            System.out.print("Four");
+                            break;
+                        case 5:
+                            System.out.print("Fif");
+                            break;
+                        case 6:
+                            System.out.print("Six");
+                            break;
+                        case 7:
+                            System.out.print("Seven");
+                            break;
+                        case 8:
+                            System.out.print("Eigh");
+                            break;
+                        case 9:
+                            System.out.print("Nine");
+                            break;
+
+
+                    }
+                    switch (ones) {
+
+                        case 0:
+                            System.out.println("ty");
+                            break;
+                        case 1:
+                            System.out.println("ty one");
+                            break;
+                        case 2:
+                            System.out.println("ty two");
+                            break;
+                        case 3:
+                            System.out.println("ty three");
+                            break;
+                        case 4:
+                            System.out.println("ty four");
+                            break;
+                        case 5:
+                            System.out.println("ty five");
+                            break;
+                        case 6:
+                            System.out.println("ty six");
+                            break;
+                        case 7:
+                            System.out.println("ty seven");
+                            break;
+                        case 8:
+                            System.out.println("ty eight");
+                            break;
+                        case 9:
+                            System.out.println("ty nine");
+                            break;
+
+
+                    }
+                }
+//
+
+            } else if (tempNumber < 10) {
+                switch (tempNumber) {
+
+                    case 1:
+                        System.out.println("and one");
+                        break;
+                    case 2:
+                        System.out.println("and two");
+                        break;
+                    case 3:
+                        System.out.println("and three");
+                        break;
+                    case 4:
+                        System.out.println("and four");
+                        break;
+                    case 5:
+                        System.out.println("and five");
+                        break;
+                    case 6:
+                        System.out.println("and six");
+                        break;
+                    case 7:
+                        System.out.println("and seven");
+                        break;
+                    case 8:
+                        System.out.println("and eight");
+                        break;
+                    case 9:
+                        System.out.println("and nine");
+                        break;
+                }
 
             }
-            switch (ones) {
-
-                case 0:
-                    System.out.println("ty");
-                    break;
-                case 1:
-                    System.out.println("ty one");
-                    break;
-                case 2:
-                    System.out.println("ty two");
-                    break;
-                case 3:
-                    System.out.println("ty three");
-                    break;
-                case 4:
-                    System.out.println("ty four");
-                    break;
-                case 5:
-                    System.out.println("ty five");
-                    break;
-                case 6:
-                    System.out.println("ty six");
-                    break;
-                case 7:
-                    System.out.println("ty seven");
-                    break;
-                case 8:
-                    System.out.println("ty eight");
-                    break;
-                case 9:
-                    System.out.println("ty nine");
-                    break;
-
-
-            }
+        } else {
+            System.out.println("Invalid Number!");
         }
-
     }
+
 }
+
+
+
 

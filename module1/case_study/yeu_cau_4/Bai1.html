@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      let string = "NGUYen   hOanG   LoNg";
-      console.log(string);
-      console.log(corectString(removeSpace(string)));
-      console.log(findMaxLength(removeSpace(string)));
 
-      function findMaxLength(array) {
-        let max = array[0];
-        for (let i = 1; i < array.length; i++) {
-          if (max.length < array[i].length) {
-            max = array[i];
-          }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let string = "NGUYen   hOanG   LoNg";
+    console.log(string);
+    console.log(corectString(removeSpace(string)));
+    console.log(findMaxLength(removeSpace(string)));
+
+    function findMaxLength(array) {
+      let max = array[0];
+      for (let i = 1; i < array.length; i++) {
+        if (max.length < array[i].length) {
+          max = array[i];
         }
-        return max;
       }
-      function corectString(array) {
-        
-        let result = array.join(" ");
-        return result;
-      }
+      return max;
+    }
+    function corectString(array) {
 
-      function removeSpace(string) {
-        let arr = string.split(" ");
-        let newArr = [];
-        for (let i = 0; i < arr.length; i++) {
-          if (arr[i] == "") {
-            continue;
-          } else {
-            newArr.push(arr[i]);
-          }
-          for (let j = 0; j < newArr.length; j++) {
+      let result = array.join(" ");
+      return result;
+    }
+
+    function removeSpace(string) {
+      let arr = string.split(" ");
+      let newArr = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == "") {
+          continue;
+        } else {
+          newArr.push(arr[i]);
+        }
+        for (let j = 0; j < newArr.length; j++) {
           newArr[j] =
             newArr[j].charAt(0).toUpperCase() + newArr[j].slice(1).toLowerCase();
         }
-        }
-        return newArr;
       }
-    </script>
-  </body>
+      return newArr;
+    }
+  </script>
+</body>
+
 </html>
