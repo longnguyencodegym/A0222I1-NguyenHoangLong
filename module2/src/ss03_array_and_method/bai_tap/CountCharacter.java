@@ -10,14 +10,13 @@ public class CountCharacter {
         System.out.print("Input character: ");
         key = sc.nextLine();
         System.out.print("Result: " + countChar(key, str));
-
     }
 
     public static int countChar(String key, String string) {
-        String[] character=string.split("");
+        String[] character = string.split("");
         int count = 0;
         for (int i = 0; i < character.length; i++) {
-            if (key.equals(character[i])) {
+            if (character[i].equals(key)) {
                 count++;
             }
         }
