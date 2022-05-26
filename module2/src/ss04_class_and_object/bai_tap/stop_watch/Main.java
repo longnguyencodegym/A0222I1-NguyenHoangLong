@@ -1,4 +1,4 @@
-package ss04_class_and_object.bai_tap.StopWatch;
+package ss04_class_and_object.bai_tap.stop_watch;
 
 
 public class Main {

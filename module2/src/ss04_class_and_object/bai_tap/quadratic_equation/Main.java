@@ -1,8 +1,8 @@
-package ss04_class_and_object.bai_tap.QuadraticEquation;
+package ss04_class_and_object.bai_tap.quadratic_equation;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a: ");
