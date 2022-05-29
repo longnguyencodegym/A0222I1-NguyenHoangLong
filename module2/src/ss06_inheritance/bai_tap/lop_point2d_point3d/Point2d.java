@@ -3,8 +3,8 @@ package ss06_inheritance.bai_tap.lop_point2d_point3d;
 import java.lang.reflect.Array;
 
 public class Point2d {
-  public float x = 0.0f;
-  public float y = 0.0f;
+  private float x = 0.0f;
+  private float y = 0.0f;
 
   public Point2d() {}
 

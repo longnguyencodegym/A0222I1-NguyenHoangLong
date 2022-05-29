@@ -13,6 +13,7 @@ public class TestPoint2dPoint3d {
     Point3d point3d = new Point3d();
     System.out.println("\n"+point3d);
     point3d=new Point3d(1,2,3);
+    System.out.println(point2d);
     float[] b=point3d.getXYZ();
     for (int i = 0; i < b.length; i++) {
       System.out.print(b[i]+" ");
