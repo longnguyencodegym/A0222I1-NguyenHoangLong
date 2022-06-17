@@ -3,7 +3,7 @@ package ss10_dsa_danh_sach.bai_tap.trien_khai_phuong_thuc_linkedlist;
 public class LinkedList<E> {
     Node head;
     int numsNodes = 0;
-    LinkedList(){
+    public LinkedList(){
 
     }
     public class Node{
