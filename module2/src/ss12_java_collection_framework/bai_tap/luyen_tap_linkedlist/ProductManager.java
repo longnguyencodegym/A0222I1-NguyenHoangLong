@@ -1,4 +1,6 @@
-package ss12_java_collection_framework.bai_tap.luyen_tap_arraylist_linkedlist;
+package ss12_java_collection_framework.bai_tap.luyen_tap_linkedlist;
+
+import ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,14 +8,14 @@ import java.util.Comparator;
 import java.util.List;
 
 public class ProductManager {
-  List<Product> listProduct = new ArrayList<>();
+  List<ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product> listProduct = new ArrayList<>();
 
-  public void add(Product product) {
+  public void add(ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product product) {
     listProduct.add(product);
   }
 
   public void display() {
-    for (Product element : listProduct) {
+    for (ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product element : listProduct) {
       System.out.println(element.toString());
     }
   }
@@ -28,7 +30,7 @@ public class ProductManager {
 
   public void search(String name) {
     boolean flag = false;
-    for (Product product : listProduct) {
+    for (ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product product : listProduct) {
       if (product.getName().equals(name)) {
         System.out.println(product.toString());
         flag=true;
@@ -42,7 +44,7 @@ public class ProductManager {
 
   public boolean check(int id) {
     boolean flag = false;
-    for (Product product : listProduct) {
+    for (ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product product : listProduct) {
       if (id == product.getId()) {
         flag = true;
       }
@@ -60,9 +62,9 @@ public class ProductManager {
   public void sort() {
     Collections.sort(
         listProduct,
-        new Comparator<Product>() {
+        new Comparator<ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product>() {
           @Override
-          public int compare(Product o1, Product o2) {
+          public int compare(ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product o1, Product o2) {
             if (o1.getPrice() == o2.getPrice()) {
               return o1.getId() - o2.getId();
             }

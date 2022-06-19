@@ -1,4 +1,4 @@
-package ss12_java_collection_framework.bai_tap.luyen_tap_arraylist_linkedlist;
+package ss12_java_collection_framework.bai_tap.luyen_tap_linkedlist;
 
 public class Product {
     public int id;

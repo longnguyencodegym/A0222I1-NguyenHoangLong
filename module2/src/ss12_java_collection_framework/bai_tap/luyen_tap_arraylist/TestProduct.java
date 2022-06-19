@@ -1,6 +1,5 @@
-package ss12_java_collection_framework.bai_tap.luyen_tap_arraylist_linkedlist;
+package ss12_java_collection_framework.bai_tap.luyen_tap_arraylist;
 
-import java.util.Collection;
 import java.util.Scanner;
 
 public class TestProduct {
