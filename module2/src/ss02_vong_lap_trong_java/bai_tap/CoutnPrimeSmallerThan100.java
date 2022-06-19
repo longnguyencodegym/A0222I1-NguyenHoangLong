@@ -2,7 +2,7 @@ package ss02_vong_lap_trong_java.bai_tap;
 import java.util.Scanner;
 public class CoutnPrimeSmallerThan100 {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+
         int prime=2;
 
         while (prime<=100){
