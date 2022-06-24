@@ -24,27 +24,20 @@ public class ProductManager {
   }
 
   public void search(String name) {
-    boolean flag = false;
+    boolean flag = true;
     for (Product product : listProduct) {
       if (product.getName().equals(name)) {
         System.out.println(product.toString());
-        flag=true;
-        break;
+        flag = false;
       }
     }
-    if (!flag) {
+    if (flag) {
       System.out.println("Not Found!");
     }
   }
 
-  public boolean check(int id) {
-    boolean flag = false;
-    for (Product product : listProduct) {
-      if (id == product.getId()) {
-        flag = true;
-      }
-    }
-    return flag;
+  public void edit(int id,String name, double price) {
+    listProduct.get(id).setIdNamePrice(id,name,price);
   }
 
   public boolean isEmpty() {

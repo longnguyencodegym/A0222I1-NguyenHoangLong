@@ -45,18 +45,13 @@ public class TestProduct {
   }
 
   public static void add() {
-    System.out.println("Id:");
 
-    int id = sc.nextInt();
-    if (productManager.check(id)) {
-      System.out.println("Exist Id. Please choose option 3 to edit this Id!");
-      return;
-    }
+
     System.out.println("Name:");
     String name = sc.next();
     System.out.println("Price:");
     double price = sc.nextDouble();
-    ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product product = new ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product(id, name, price);
+    ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product product = new Product( name, price);
     productManager.add(product);
   }
 
@@ -83,9 +78,8 @@ public class TestProduct {
     String name = sc.next();
     System.out.println("Edit Price:");
     double price = sc.nextDouble();
-    productManager.delete(id);
-    ss12_java_collection_framework.bai_tap.luyen_tap_arraylist.Product editProduct = new Product(id, name, price);
-    productManager.add(editProduct);
+    productManager.edit(id,name,price);
+
   }
 
   public static void searchByName() {
