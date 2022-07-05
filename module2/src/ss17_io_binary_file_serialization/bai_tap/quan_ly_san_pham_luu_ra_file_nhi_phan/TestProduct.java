@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class TestProduct {
   static Scanner sc = new Scanner(System.in);
+  static List<Product> products = new ArrayList<>();
   static String link =
       "src/ss17_io_binary_file_serialization/bai_tap/quan_ly_san_pham_luu_ra_file_nhi_phan/product.bin";
 
@@ -66,7 +67,7 @@ public class TestProduct {
   }
 
   public static void add() {
-    List<Product> products = new ArrayList<>();
+
     System.out.print("Name:");
     String name = sc.next();
     System.out.print("Company:");
