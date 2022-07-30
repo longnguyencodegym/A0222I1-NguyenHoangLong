@@ -1,16 +1,16 @@
-create database if not exists `co_so_du_lieu_quan_ly_ban_hang`;
+create database  `co_so_du_lieu_quan_ly_ban_hang`;
 use co_so_du_lieu_quan_ly_ban_hang;
-create table custommer(
+create table customer(
 c_id int auto_increment primary key,
-c_name varchar(20),
-c_age varchar(20)
+c_name varchar(25),
+c_age tinyint
 );
 create table `order`(
 o_id int auto_increment primary key,
 o_date date,
 o_total_price float,
 c_id int,
-foreign key(c_id) references custommer(c_id)
+foreign key(c_id) references customer(c_id)
 );
 create table product(
 p_id int auto_increment primary key,
