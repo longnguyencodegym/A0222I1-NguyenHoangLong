@@ -173,14 +173,16 @@ delete from hop_dong where ma_khach_hang = old.ma_khach_hang;
 end $$
 delimiter ;
 */
--- 19.	(chưa xong)Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+-- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 update dich_vu_di_kem dvdk
 set gia=gia*2
 where ma_dich_vu_di_kem=
 (select ma_dich_vu_di_kem 
 from hop_dong_chi_tiet hdct 
 join hop_dong h on hdct.ma_hop_dong=h.ma_hop_dong
-where year(h.ngay_lam_hop_dong)=2020 and hdct.so_luong>10);
+where year(h.ngay_lam_hop_dong)=2020
+group by ma_dich_vu_di_kem
+having sum(so_luong) > 10);
 
 -- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, thông tin hiển thị bao gồm id 
 -- (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
