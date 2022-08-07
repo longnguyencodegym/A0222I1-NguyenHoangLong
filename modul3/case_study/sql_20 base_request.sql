@@ -176,7 +176,7 @@ delimiter ;
 -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 update dich_vu_di_kem dvdk
 set gia=gia*2
-where ma_dich_vu_di_kem=
+where ma_dich_vu_di_kem=	
 (select ma_dich_vu_di_kem 
 from hop_dong_chi_tiet hdct 
 join hop_dong h on hdct.ma_hop_dong=h.ma_hop_dong
