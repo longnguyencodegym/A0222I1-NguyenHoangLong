@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         font-family: Arial;
+      }
+
+      #menu {
+         height: 30px;
+         padding: 0;
+         margin: 0;
+         background-color: #000000;
+         border: 1px solid #CDCDCD;
+      }
+
+      #menu ul,
+      #menu li {
+         padding: 0;
+         margin: 0;
+      }
+
+      #menu li {
+         position: relative;
+         float: left;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+      }
+
+      #menu li p {
+         width: 100px;
+         height: 30px;
+         display: block;
+         text-decoration: none;
+         text-align: center;
+         line-height: 30px;
+         background-color: yellow;
+         color: green;
+      }
+
+      #menu ul ul li p {
+         width: 200px;
+         text-align: left;
+         padding-left: 10px;
+
+      }
+
+      #menu li p:hover {
+         background-color: blueviolet;
+      }
+
+      #menu ul ul {
+         position: absolute;
+         top: 30px;
+         left: 15px;
+         visibility: hidden;
+      }
+
+      #menu ul li:hover ul {
+         visibility: visible;
+      }
+   </style>
+</head>
+
+<body>
+   
+   <div id="menu">
+      <ul>
+         <li>
+            <p>giao_vien</p>
+            <ul>
+               <li>
+                  <p>Chanh</p>
+               </li>
+               <li>
+                  <p>Cong</p>
+               </li>
+               <li>
+                  <p>Quoc</p>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <p>hoc_vien</p>
+            <ul>
+               <li>
+                  <p>Duyet</p>
+               </li>
+               <li>
+                  <p>Tuan</p>
+               </li>
+               <li>
+                  <p>Long</p>
+               </li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</body>
+
+</html>

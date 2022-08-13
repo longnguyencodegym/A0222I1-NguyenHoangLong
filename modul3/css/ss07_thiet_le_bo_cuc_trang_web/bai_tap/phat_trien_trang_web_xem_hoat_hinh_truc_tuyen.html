@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .row{
+    /*để cho các thẻ div nổi lên*/
+    display: flex;
+    flex-wrap: wrap;
+}
+   @media only screen and (max-width:740px ){
+    .col-s-1 {width: 8.33333%;}
+    .col-s-2 {width: 16.66667%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33333%;}
+    .col-s-5 {width: 41.66667%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33333%;}
+    .col-s-8 {width: 66.66667%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33333%;}
+    .col-s-11 {width: 91.66667%;}
+    .col-s-12 {width: 100%;}
+    
+   
+}
+/*Màn hinh laptop và máy tính bảng*/
+@media only screen and (min-width:741px)and (max-width:1240px){
+    .col-m-1 {width: 8.33333%;}
+    .col-m-2 {width: 16.66667%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33333%;}
+    .col-m-5 {width: 41.66667%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33333%;}
+    .col-m-8 {width: 66.66667%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33333%;}
+    .col-m-11 {width: 91.66667%;}
+    .col-m-12 {width: 100%;}
+}
+/*Màn hình máy tính pc và tivi smart*/
+@media only screen and (min-width:1241px){
+    .col-l-1 {width: 8.33333%;}
+    .col-l-2 {width: 16.66667%;}
+    .col-l-3 {width: 25%;}
+    .col-l-4 {width: 33.33333%;}
+    .col-l-5 {width: 41.66667%;}
+    .col-l-6 {width: 50%;}
+    .col-l-7 {width: 58.33333%;}
+    .col-l-8 {width: 66.66667%;}
+    .col-l-9 {width: 75%;}
+    .col-l-10 {width: 83.33333%;}
+    .col-l-11 {width: 91.66667%;}
+    .col-l-12 {width: 100%;}
+}
+
+     body{
+      box-sizing: border-box;
+
+     }
+     header{
+      display: block;
+      width: 100%;
+      position: fixed;
+      top: 0;
+     }
+
+      nav{
+         
+         justify-content: center;
+         align-items: center;
+         margin-top: 120px;
+         padding: 10px;
+         
+      }
+      section{
+         margin-top: 10px;
+         padding: 10px;
+      }
+      .bg_white_smoke{
+         background-color: whitesmoke;
+         
+         box-sizing: border-box;
+      }
+      .bg_white{
+         background-color: white;
+         padding: 10px;
+         
+      }
+   
+   .right_border{
+      border-right: 1px solid black;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+   }
+   .intro_hh{
+text-align: center;
+padding: 20px;
+   }
+   .content{
+      width: 900px;
+      padding: 30px;
+   }
+   h3{
+      color: grey;
+   }
+   .ten{
+font-size: 20px;
+padding-left: 50px;
+align-items: center;
+
+box-sizing: border-box;
+   }
+   .luot_xem{
+font-size: 15px;
+color: grey;
+padding-left: 50px;
+align-items: center;
+
+box-sizing: border-box;
+display: block;
+   }
+   .kenh{
+font-size: 20px;
+color: grey;
+padding-left: 50px;
+align-items: center;
+
+box-sizing: border-box;
+   }
+
+   
+
+   
+   
+   </style>
+</head>
+
+<body>
+   <header class="bg_white_smoke">
+      <img src="https://banner2.cleanpng.com/20180506/fwe/kisspng-cartoon-network-television-show-logo-5aef9173705310.6740457115256497794601.jpg" alt="logo_cartoon" width="150px">
+   </header>
+   <nav class="row bg_white_smoke">
+     
+      <div class="right_border">phim hoat hinh</div>
+      <div class="right_border">phim hoat hinh yeu thich</div>
+      <div class="right_border">nhan vat hoat hinh</div>
+      <div class="right_border" style="border-style: hidden;">gop y</div>
+     
+   </nav>
+   <section class="row">
+      <div class="col-s-12 col-m-4 bg_white_smoke">
+         <div class="intro_hh">
+            <img src="https://afamilycdn.com/150157425591193600/2020/12/11/phim-hoat-hinh-doremon-1607677274161983039977.jpg" alt="doremon" width="400px" >
+         </div>
+        <div class="bg_white">
+         <div class="row " >
+            <div class="ten">Nobita</div>
+            <div class="luot_xem">3k luot xem</div>
+         </div>
+         <div class="kenh">Xao Ke TV</div>
+        </div>
+         <div class="intro_hh">
+            <img src="https://i.pinimg.com/originals/f4/96/8a/f4968a33345ae116994138fdf2cbb521.jpg" alt="doremon" width="400px">
+         </div>
+         <div class="bg_white">
+            <div class="row ">
+               <div class="ten">Doremon</div>
+               <div class=" luot_xem">4k luot xem</div>
+            </div>
+            <div class="kenh">Xao Ke TV</div>
+         </div>
+         <div class="intro_hh">
+            <img src="https://alokiddy.com.vn/Uploads/images/hoc-tieng-anh-qua-phim-hoat-hinh-doremon.jpg" alt="doremon" width="400px">
+         </div>
+         <div class="bg_white" >
+            <div class="row ">
+               <div class=" ten">Chaien</div>
+               <div class="luot_xem">2,5k luot xem</div>
+            </div>
+            <div class="kenh">Xao Ke TV</div>
+         </div>
+         <div class="intro_hh">
+            <img src="https://photo-cms-plo.zadn.vn/w850/Uploaded/2022/wopsvun/2019_05_25/doaremon_JXRB.png" alt="doremon" width="400px" >
+         </div>
+        <div class="bg_white">
+         <div class="row ">
+            <div class="ten">Xuka</div>
+            <div class="luot_xem">10k luot xem</div>
+         </div>
+         <div class="kenh ">Xao Ke TV</div>
+        </div>
+         
+      </div>
+      <div class="col-s-12 col-m-8">
+         <div class="content"><img src=" https://www.gocdienanh.com/wp-content/uploads/2019/05/review-phim-doraemon-nobita-va-mat-trang-phieu-luu-ky-10.jpg" alt="nobita"></div>
+         <div class="content"> 
+            <h2>I'm Nobita</h2>
+            <h3 >Ai đã từng đọc cuốn truyện Doraemon đều biết rằng Nobita là một cậu nhóc yếu đuối thường xuyên mè nheo Doraemon đáp ứng những yêu cầu quái dị của mình để không bị nhóm bạn chê cười và lấy được cảm tình của cô nàng Xuka xinh đẹp. Trong phần phim này cũng không phải là trường hợp ngoại lệ. Nobita vì muốn có được sự chú ý của Xuka đã lớn tiếng tuyên bố rằng trên mặt trăng có thỏ, nhưng vì mọi người không tin nên cậu đã nhờ Doraemon dùng bảo bối biến điều đó thành sự thật.
+
+               Cơn sĩ diện của Nobita lại một lần nữa làm khổ Doraemon và anh chàng mèo máy dễ thương không nỡ lòng nào khiến bạn mình thất vọng. Vậy là Nobita cùng Doraemon, Xuka, Xeko, Chaien và người bạn mới Lunna lên đường tìm kiếm sự thật. Trên hành trình đó, nhóm bạn đã phát hiện ra những bí mật thú vị trên mặt trăng và chống lại ác nhân Diabolo cùng tên hầu cận gian manh Goddard.</h3>
+         </div>
+      </div>
+   </section>
+   <footer class="bg_white_smoke" style="text-align:center;padding: 5px;">
+      <h3 >@2022 Thiet ke boi GDragon</h3>
+   </footer>
+</body>
+
+</html>

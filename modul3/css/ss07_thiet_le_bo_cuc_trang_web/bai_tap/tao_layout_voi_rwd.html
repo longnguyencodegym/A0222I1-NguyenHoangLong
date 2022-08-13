@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+         .row {
+         /*để cho các thẻ div nổi lên*/
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .col-m-1 {
+         width: 8.33333%;
+      }
+
+      .col-m-2 {
+         width: 16.66667%;
+      }
+
+      .col-m-3 {
+         width: 25%;
+      }
+
+      .col-m-4 {
+         width: 33.33333%;
+      }
+
+      .col-m-5 {
+         width: 41.66667%;
+      }
+
+      .col-m-6 {
+         width: 50%;
+      }
+
+      .col-m-7 {
+         width: 58.33333%;
+      }
+
+      .col-m-8 {
+         width: 66.66667%;
+      }
+
+      .col-m-9 {
+         width: 75%;
+      }
+
+      .col-m-10 {
+         width: 83.33333%;
+      }
+
+      .col-m-11 {
+         width: 91.66667%;
+      }
+
+      .col-m-12 {
+         width: 100%;
+      }
+      header,footer {
+         height: 20%;
+         font-size: 15px;
+         background-color: grey;
+         color: white;
+         padding: 20px;
+         text-align: center;
+      }
+      section{
+         height: 620px;
+         display: block;
+      }
+      .link{
+         background-color: whitesmoke;
+         text-align: center;
+      }
+      .link ul li{
+         color: blue;
+         list-style-type: none;
+         margin:10px auto;
+         
+      }
+      .ads_container{
+         background-color: whitesmoke;
+         text-align: center;
+         display: inline-block;
+         
+         
+      }
+      .ads_container ul li{
+         width: 100px;
+         height: 80px;
+         border: 2px solid rgb(230, 230, 230);
+         padding-top: 25px;
+         margin:10px auto;
+         list-style-type: none;
+         box-sizing: border-box;
+         
+      }
+      article{
+         padding: 20px;
+      }
+      
+   </style>
+</head>
+<body>
+   <header class="row">
+      <div class="col-m-1">LOGO</div>
+      <div class="col-m-1">HOME</div>
+      <div class="col-m-1">ABOUT</div>
+      <div class="col-m-1">PROJECT</div>
+      <div class="col-m-1">CONTACT</div>
+      <div class="col-m-6"></div>
+      <div class="col-m-1">LOGIN</div>
+   </header>
+   <section class="row">
+      <div class="col-m-2 link">
+         <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+         </ul>
+      </div>
+      <div class="col-m-8">
+         <article>
+            <h1>Welcome</h1>
+            <p>Welcome To Vietnam! This is OFFICIAL group for Welcome To Vietnam fans. See, enjoy and tell us what Vietnam is in you!
+               Share your Vietnam's best videos with other fans here!
+               Post your travel videos and pictures, but please do not spam the group with selfies, solicitations or offers for a business, or anything unrelated to travel in general.</p>
+               <hr>
+               <h1>Test</h1>
+               <p>Lorem ipsum</p>
+         </article>
+      </div>
+      <div class="col-m-2 ads_container">
+        
+            <ul>
+               <li>ADS</li>
+               <li>ADS</li>
+            </ul>
+        
+      </div>
+   </section>
+   <footer class="row">
+      <div class="col-m-12">Footer text</div>
+   </footer>
+</body>
+</html>
