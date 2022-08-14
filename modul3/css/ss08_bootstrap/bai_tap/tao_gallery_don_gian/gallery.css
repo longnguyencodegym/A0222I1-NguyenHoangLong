@@ -1,0 +1,7 @@
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+.middle{
+   margin: 20px;
+}
